@@ -1,36 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;400&display=swap" rel="stylesheet"> 
-  
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+
   <title>Frontend Mentor | QR code component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    :root{
+    :root {
       --white: hsl(0, 0%, 100%);
       --light-gray: hsl(212, 45%, 89%);
       --grayish-blue: hsl(220, 15%, 55%);
       --dark-blue: hsl(218, 44%, 22%);
-      --fs:15px;
+      --sm: 14px;
+      --md: 16px;
+      --lg: 18px;
     }
-    body{
+
+    body {
+      margin: 0;
       font-family: 'Outfit', sans-serif;
     }
 
-    /* .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); } */
+    .main {
+      width: 100%;
+      height: 100vh;
+      background-color: var(--light-gray);
+      display: grid;
+      place-items: center;
+    }
+
+    .card-container{
+      border-radius: 25px;
+      background-color: var(--white);
+      width: 320px;
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .qr-card{
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+    }
+
+    .qr-card figure img{
+      width: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .info-card p{
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .info-card p:nth-child(1){
+      font-size: var(--lg);
+      font-weight: 700;
+    }
+
+    .info-card p:nth-child(2){
+      color: var(--grayish-blue);
+    }
   </style>
 </head>
+
 <body>
-  <div class="main-container">
-    
+  <div class="main">
     <div class="card-container">
       <div class="qr-card">
         <figure>
@@ -42,11 +89,7 @@
         <p>Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
       </div>
     </div>
-
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </div>
   </div>
 </body>
+
 </html>
